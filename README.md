@@ -55,3 +55,30 @@ These issues were debugged using an oscilloscope and corrected through FSM logic
 ## Result
 
 The final system achieved end-to-end communication between Linux, the custom I2C controller, and the MCP23008 expander.
+
+## Repository Structure
+
+```text
+constraints/
+├── blackboard.xdc
+└── pb_pullup.xdc
+
+linux/
+├── i2c_driver.c
+├── i2c_expander.c
+└── i2c_stop_go.c
+
+rtl/
+├── fifo.sv
+├── i2c.v
+├── i2c_fsm.sv
+├── i2c_slave_lite_v1_0_i2c_axi.v
+└── i2c_system_top.v
+
+scripts/
+└── stop_go.sh
+
+vivado/
+└── system.bd
+
+README.md
